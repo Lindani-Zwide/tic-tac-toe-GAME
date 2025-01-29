@@ -40,7 +40,7 @@ function handleCellClick(event) {
     gameOver = true;
     disableCells();
   } else if (checkDraw()) {
-    winnerText.textContent = 'It\'s a draw!';
+    winnerText.textContent =   `t\'s a draw!`;
     winnerAnnouncement.style.display = 'flex';
     gameOver = true;
     disableCells();
