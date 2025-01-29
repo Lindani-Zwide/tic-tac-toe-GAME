@@ -103,7 +103,7 @@ function getWinningCells() {
 // Function to highlight winning cells
 function highlightWinningCells() {
   winningCells.forEach((index) => {
-    cells[index].style.backgroundColor = 'green';
+    cells[index].style.backgroundColor = '#ccccda';
   });
 }
 
