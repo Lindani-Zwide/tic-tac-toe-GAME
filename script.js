@@ -1,6 +1,6 @@
 // Get all cells
 const cells = document.querySelectorAll('.cell');
-
+disableCells();
 // Get game mode selector
 const gameModeSelector = document.querySelector('.game-mode-selector');
 const dropdownButton = document.querySelector('.dropdown-button');
@@ -103,7 +103,7 @@ function getWinningCells() {
 // Function to highlight winning cells
 function highlightWinningCells() {
   winningCells.forEach((index) => {
-    cells[index].style.backgroundColor = '#ccccda';
+    cells[index].style.backgroundColor = 'rgb(144, 144, 156)';
   });
 }
 
