@@ -1,0 +1,169 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    pointer-events: all;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    background-image:linear-gradient(125deg, #141414 0%, #24292E 20%, #455A64 35%, #2C3E50 50%, #2C3E50 70%, #1A1D23 100%)    ;
+    height: 100vh;
+}
+header{
+    align-self: center;
+    color: #e5e5ed; 
+    font-size: 1.5rem;
+    margin: 2.1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-shadow: 0 2px 4px #e5e5ed;;
+}
+.cells-box{
+    align-self: center;
+    height: 12rem;
+    width: 12rem;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 0.5rem;
+}
+.cell{
+    background-color: rgba(17, 24, 39,0.3);
+    border-radius: 0.5rem;
+    display:grid;
+    place-items: center;
+    margin:0.1rem ;
+    cursor: pointer;
+    pointer-events: all;
+    transition: background-color 400ms ease-in-out;
+}
+.cell:hover{
+    background-color: rgba(17, 24, 39,0.7);
+}
+img{
+    border-radius:1.5rem;
+    padding: 0.05rem 0.02rem;
+    transition: src 400ms ease-in-out;
+}
+/*
+  Game mode
+*/
+
+.game-mode-selector {
+    position: relative;
+    align-self: center;
+    /* margin-bottom:5rem; */
+  }
+
+  .dropdown-button {
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color:#085984;
+    color:#ccccda;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 400ms ease-in-out;
+  }
+  
+  .dropdown-button:hover {
+    background-color:#084a6e;
+  }
+  
+  .dropdown-content {
+    background-color: rgb(24, 39, 55);
+    border-radius: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    display: none;
+    animation: dropdown-animation 0.4s;
+  }
+  
+  @keyframes dropdown-animation {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .dropdown-content .option {
+    padding: 0.4rem;
+    cursor: pointer;
+    background-color:#084a6e;
+    border-radius: 0.5rem;
+    color: #e5e5ed;
+  }
+  
+  .dropdown-content .option,#reset-game:hover {
+    background-color: #053f5e;
+  }
+  
+  .dropdown-content.show {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .players{
+    align-self: center;
+    height: 1.7rem;
+    width: 12rem;
+    display: grid;
+    place-items: center;
+    background-color: #000;
+    border-radius: 0.6rem;
+    margin-top: 1rem;
+    font-size: 0.6rem;
+    color: #ccccda;
+  }
+  @font-face {
+    font-family: c_timer;
+    src: url(Assets/C_Timer.ttf);
+  }
+  span{
+    font-family: c_timer;
+    font-size: 1.8rem;
+    margin: 0.1rem;
+    color: red;
+  }
+  .winner-announcement {
+    align-self: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0,0.2);
+    border-radius: 0.3rem;
+    color: #ccccda;
+  }
+  .player-turn{
+    font-size: 1.2rem;
+    align-self: center;
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 0.3rem;
+    color:green;
+  }
+#reset-game{
+  padding: 0.2rem;
+  background-color:#085984;
+  color:#ccccda;
+  margin-top: 0.3rem;
+  border: none;
+  font-weight: 550;
+  align-self: center;
+  width: rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 400ms ease-in-out;
+}
