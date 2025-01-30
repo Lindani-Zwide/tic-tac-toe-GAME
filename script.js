@@ -207,7 +207,7 @@ resetGameButton.addEventListener('click', resetGame);
 
 // Function to reset game
 function resetGame() {
-dropdownButton.innerHTML=`SELECT OPPONENT &#11207`;
+dropdownButton.innerHTML=`SELECT OPPONENT  &#8592`;
 your_score = 0;
 opponent_score = 0;
 playersElement.innerHTML = `<span>${your_score}</span>-You VS ${gameMode}-<span>${opponent_score}</span>`;
