@@ -176,3 +176,24 @@ img{
 .option:hover{
   background-color: #085984;
 }
+
+header{
+  position: relative;
+}
+
+.help-link {
+  position: absolute;
+  align-self:flex-end ;
+  font-size: 1.2rem;
+  color: #9f9898;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0.3rem;
+  margin: 1.3rem;
+  border: 0.1rem solid  #9f9898; 
+  border-radius: 1rem;
+}
+
+.help-link:hover {
+  color: #e3d3d3;
+}
