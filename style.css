@@ -120,8 +120,9 @@ img{
   }
   .players{
     align-self: center;
-    height: 1.7rem;
-    width: 12rem;
+    height: 2rem;
+    width: 9rem;
+    padding: 0.1rem;
     display: grid;
     place-items: center;
     background-color: #000;
