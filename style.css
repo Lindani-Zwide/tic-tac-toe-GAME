@@ -129,6 +129,8 @@ img{
     margin-top: 1rem;
     font-size: 0.6rem;
     color: #ccccda;
+    pointer-events: none;
+    user-select: none;
   }
   @font-face {
     font-family: c_timer;
