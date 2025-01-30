@@ -225,10 +225,10 @@ dropdownContent.classList.toggle('show');
 // Function to toggle dropdown
 function toggleDropDown() {
 if (!isDropDownOpen) {
-dropdownButton.innerHTML = `SELECT OPPONENT &#11206`;
+dropdownButton.innerHTML = `SELECT OPPONENT  &#8595`;
 isDropDownOpen = true;
 } else {
-dropdownButton.innerHTML = `SELECT OPPONENT &#11207`;
+dropdownButton.innerHTML = `SELECT OPPONENT  &#8592`;
 isDropDownOpen = false;
 }
 dropdownContent.classList.toggle('show');
