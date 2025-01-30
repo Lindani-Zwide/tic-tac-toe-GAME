@@ -21,7 +21,8 @@ header{
     margin: 2.1rem;
     padding: 0.5rem;
     border-radius: 1rem;
-    text-shadow: 0 2px 4px #e5e5ed;;
+    text-shadow: 0 2px 4px #e5e5ed;
+    margin-top: 4rem;
 }
 .cells-box{
     align-self: center;
@@ -132,6 +133,7 @@ img{
     color: #ccccda;
     pointer-events: none;
     user-select: none;
+    margin-bottom: 1rem;
   }
   @font-face {
     font-family: c_timer;
@@ -176,11 +178,6 @@ img{
 .option:hover{
   background-color: #085984;
 }
-
-header{
-  position: relative;
-}
-
 .help-link {
   position: absolute;
   align-self:flex-end ;
