@@ -114,7 +114,7 @@ img{
     background-color: #053f5e;
   }
   
-  .dropdown-content.show {
+  .dropdown-content.show{
     display: flex;
     flex-direction: column;
     gap: 1rem;

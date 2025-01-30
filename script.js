@@ -183,8 +183,10 @@ cell.addEventListener('click', handleCellClick);
 });
 
 // Add event listener to game mode selector
-dropdownButton.addEventListener('click', toggleDropDown);
-
+dropdownButton.addEventListener('click', ()=>{
+  dropdownContent.classList.toggle('show');
+  toggleArrowDirection();
+});
 // Add event listeners to game mode options
 document.querySelectorAll('.option').forEach((option) => {
   option.addEventListener('click', () => {
@@ -192,7 +194,7 @@ document.querySelectorAll('.option').forEach((option) => {
   document.getElementById('reset-game').style.pointerEvents='auto'
   playersElement.innerHTML = `<span>${your_score}</span>-You VS ${gameMode}-<span>${opponent_score}</span>`;
   dropdownContent.classList.toggle('show');
-  toggleDropDown();
+  toggleArrowDirection();
   resetGame();
   });
   });
@@ -201,24 +203,21 @@ document.querySelectorAll('.option').forEach((option) => {
 resetGameButton.addEventListener('click', resetGame);
 
 // Function to reset game
-function resetGame() {
-   dropdownButton.innerHTML=`SELECT OPPONENT  &#8592`;
-   your_score = 0;
-   opponent_score = 0;
+function resetGame() { 
+   your_score=opponent_score=0;
    playersElement.innerHTML = `<span>${your_score}</span>-You VS ${gameMode}-<span>${opponent_score}</span>`;
    cells.forEach((cell) => {
-   cell.innerHTML = '';
-   cell.style.backgroundColor = '';
+      cell.innerHTML = '';
+      cell.style.backgroundColor = '';
    });
    winnerAnnouncement.style.display = 'none';
    gameOver = false;
    currentPlayer = 'X';
-   enableCells();
-   dropdownContent.classList.toggle('show');
+   enableCells(); 
 }
 
-// Function to toggle dropdown
-function toggleDropDown() {
+// Function to toggle arrow direction
+function toggleArrowDirection() {
   if (!isDropDownOpen) {
    dropdownButton.innerHTML = `SELECT OPPONENT  &#8595`;
    isDropDownOpen = true;
@@ -226,5 +225,4 @@ function toggleDropDown() {
    dropdownButton.innerHTML = `SELECT OPPONENT  &#8592`;
    isDropDownOpen = false;
   }
-  dropdownContent.classList.toggle('show');
 }
