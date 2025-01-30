@@ -82,13 +82,13 @@ img{
     border-radius: 1rem;
     position: absolute;
     top: 100%;
-    left: 0;
+    left:-0.25rem;
     width: 15rem;
     padding: 12px 16px;
     border: none;
     display: none;
     animation: dropdown-animation 0.4s;
-    align-self: center;
+    
   }
   
   @keyframes dropdown-animation {
